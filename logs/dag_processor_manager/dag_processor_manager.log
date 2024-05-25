@@ -16209,3 +16209,18 @@ File Path                               PID  Runtime      # DAGs    # Errors  La
 /opt/airflow/dags/helpers.py                                   0           0  0.52s           2024-05-24T16:25:03
 ================================================================================
 [2024-05-24T16:25:35.125+0000] {manager.py:452} INFO - Exiting gracefully upon receiving signal 15
+[2024-05-25T14:49:04.765+0000] {manager.py:470} INFO - Processing files using up to 2 processes at a time 
+[2024-05-25T14:49:04.771+0000] {manager.py:471} INFO - Process each file at most once every 30 seconds
+[2024-05-25T14:49:04.778+0000] {manager.py:472} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2024-05-25T14:49:04.782+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2024-05-25T14:49:04.938+0000] {manager.py:740} INFO - There are 3 files in /opt/airflow/dags
+[2024-05-25T14:49:05.242+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/helpers.py                                   0           0
+/opt/airflow/dags/main.py                42  0.17s             0           0
+/opt/airflow/dags/process_csv_dag.py     43  0.10s             0           0
+================================================================================

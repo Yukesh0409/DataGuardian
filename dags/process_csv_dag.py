@@ -2,17 +2,15 @@ from airflow import DAG
 from airflow.operators.python import PythonOperator
 from datetime import datetime
 
-#Define default arguments
+
 default_args = {
  'owner': 'Yukesh',
  'start_date': datetime (2024, 5, 24),
  'retries': 0,
 }
 
-# Instantiate your DAG
 dag = DAG ('my_second_dag', default_args=default_args, schedule_interval=None)
 
-# Define tasks
 def task1():
  print ("Executing Task 1")
 
@@ -30,5 +28,4 @@ task_2 = PythonOperator(
  dag=dag,
 )
 
-# Set task dependencies
 task_1 >> task_2

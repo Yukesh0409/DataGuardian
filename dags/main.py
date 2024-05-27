@@ -3,7 +3,6 @@ from requests.auth import HTTPBasicAuth
 import time
 from datetime import datetime
 
-# Configuration
 AIRFLOW_BASE_URL = 'http://localhost:8080'
 DAG_ID = 'my_second_dag'
 USERNAME = 'yukesh'

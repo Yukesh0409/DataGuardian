@@ -135,3 +135,15 @@
 [2024-05-25T15:03:02.171+0000] {logging_mixin.py:188} INFO - [2024-05-25T15:03:02.171+0000] {dagbag.py:334} INFO - File /opt/airflow/dags/helpers.py assumed to contain no DAGs. Skipping.
 [2024-05-25T15:03:02.172+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/helpers.py
 [2024-05-25T15:03:02.193+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/helpers.py took 0.044 seconds
+[2024-05-25T15:03:32.571+0000] {processor.py:161} INFO - Started process (PID=359) to work on /opt/airflow/dags/helpers.py
+[2024-05-25T15:03:32.573+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/helpers.py for tasks to queue
+[2024-05-25T15:03:32.575+0000] {logging_mixin.py:188} INFO - [2024-05-25T15:03:32.575+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/helpers.py
+[2024-05-25T15:03:32.581+0000] {logging_mixin.py:188} INFO - [2024-05-25T15:03:32.581+0000] {dagbag.py:334} INFO - File /opt/airflow/dags/helpers.py assumed to contain no DAGs. Skipping.
+[2024-05-25T15:03:32.581+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/helpers.py
+[2024-05-25T15:03:32.596+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/helpers.py took 0.032 seconds
+[2024-05-25T15:04:03.244+0000] {processor.py:161} INFO - Started process (PID=368) to work on /opt/airflow/dags/helpers.py
+[2024-05-25T15:04:03.247+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/helpers.py for tasks to queue
+[2024-05-25T15:04:03.253+0000] {logging_mixin.py:188} INFO - [2024-05-25T15:04:03.252+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/helpers.py
+[2024-05-25T15:04:03.268+0000] {logging_mixin.py:188} INFO - [2024-05-25T15:04:03.267+0000] {dagbag.py:334} INFO - File /opt/airflow/dags/helpers.py assumed to contain no DAGs. Skipping.
+[2024-05-25T15:04:03.270+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/helpers.py
+[2024-05-25T15:04:03.319+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/helpers.py took 0.095 seconds

@@ -9,6 +9,7 @@ USERNAME = 'yukesh'
 PASSWORD = 'yukesh'
 RETRY_DELAY = 10  
 
+
 def trigger_dag(dag_id, run_id):
     url = f"{AIRFLOW_BASE_URL}/api/v1/dags/{dag_id}/dagRuns"
     data = {
@@ -24,8 +25,7 @@ def trigger_dag(dag_id, run_id):
     else:
         print(f"Failed to trigger DAG {dag_id}: {response.text}")
 
-
-for i in range(10):
-    run_id = f"manual_run_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{i+1}"
+def start_trigger():
+    run_id = f"manual_run_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
     trigger_dag(DAG_ID, run_id)
-    time.sleep(RETRY_DELAY)  
+    time.sleep(2)  

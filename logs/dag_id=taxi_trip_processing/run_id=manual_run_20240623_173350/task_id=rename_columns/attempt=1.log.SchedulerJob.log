@@ -1,0 +1,1 @@
+[2024-06-23T12:07:55.298+0000] {task_context_logger.py:104} ERROR - Executor reports task instance <TaskInstance: taxi_trip_processing.rename_columns manual_run_20240623_173350 [queued]> finished (success) although the task says it's queued. (Info: None) Was the task killed externally?

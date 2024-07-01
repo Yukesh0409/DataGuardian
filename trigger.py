@@ -4,7 +4,7 @@ import time
 from datetime import datetime
 
 AIRFLOW_BASE_URL = 'http://localhost:8080'
-DAG_ID = 'my_second_dag'
+DAG_ID = 'taxi_trip_processing'
 USERNAME = 'yukesh'
 PASSWORD = 'yukesh'
 RETRY_DELAY = 10  

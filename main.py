@@ -62,7 +62,8 @@ def file_order(file_list):
         time.sleep(2)
         print("Triggering Airflow")
         start_trigger()
-        time.sleep(2)
+        time.sleep(10)
+        break
 
 
 

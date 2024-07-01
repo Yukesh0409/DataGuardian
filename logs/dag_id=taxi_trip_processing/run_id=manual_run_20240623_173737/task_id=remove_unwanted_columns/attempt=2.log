@@ -1,0 +1,20 @@
+[2024-06-23T12:14:00.945+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-06-23T12:14:00.978+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: taxi_trip_processing.remove_unwanted_columns manual_run_20240623_173737 [queued]>
+[2024-06-23T12:14:00.991+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: taxi_trip_processing.remove_unwanted_columns manual_run_20240623_173737 [queued]>
+[2024-06-23T12:14:00.992+0000] {taskinstance.py:2306} INFO - Starting attempt 2 of 2
+[2024-06-23T12:14:01.012+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): remove_unwanted_columns> on 2024-06-23 12:07:40.752114+00:00
+[2024-06-23T12:14:01.029+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=62) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-06-23T12:14:01.031+0000] {standard_task_runner.py:63} INFO - Started process 64 to run task
+[2024-06-23T12:14:01.031+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'taxi_trip_processing', 'remove_unwanted_columns', 'manual_run_20240623_173737', '--job-id', '311', '--raw', '--subdir', 'DAGS_FOLDER/process_csv_dag.py', '--cfg-path', '/tmp/tmpe9laj2o6']
+[2024-06-23T12:14:01.034+0000] {standard_task_runner.py:91} INFO - Job 311: Subtask remove_unwanted_columns
+[2024-06-23T12:14:01.091+0000] {task_command.py:426} INFO - Running <TaskInstance: taxi_trip_processing.remove_unwanted_columns manual_run_20240623_173737 [running]> on host 2f6bfdd478ed
+[2024-06-23T12:14:01.213+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='your_email@example.com' AIRFLOW_CTX_DAG_OWNER='Yukesh' AIRFLOW_CTX_DAG_ID='taxi_trip_processing' AIRFLOW_CTX_TASK_ID='remove_unwanted_columns' AIRFLOW_CTX_EXECUTION_DATE='2024-06-23T12:07:40.752114+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual_run_20240623_173737'
+[2024-06-23T12:14:01.214+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-06-23T12:14:01.333+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-06-23T12:14:01.334+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-06-23T12:14:01.345+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=taxi_trip_processing, task_id=remove_unwanted_columns, run_id=manual_run_20240623_173737, execution_date=20240623T120740, start_date=20240623T121400, end_date=20240623T121401
+[2024-06-23T12:14:01.369+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-06-23T12:14:01.401+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-06-23T12:14:01.404+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

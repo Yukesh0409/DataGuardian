@@ -1,8 +1,5 @@
-# Logs
 logs/
 *.log
 
-
-# Add other files or directories you want to ignore
 data/
 dags/temp.csv

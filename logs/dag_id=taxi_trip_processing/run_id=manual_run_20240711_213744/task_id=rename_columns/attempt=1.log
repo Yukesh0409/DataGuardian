@@ -1,0 +1,23 @@
+[2024-07-11T16:08:12.644+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-11T16:08:12.682+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: taxi_trip_processing.rename_columns manual_run_20240711_213744 [queued]>
+[2024-07-11T16:08:12.700+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: taxi_trip_processing.rename_columns manual_run_20240711_213744 [queued]>
+[2024-07-11T16:08:12.701+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-07-11T16:08:12.731+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): rename_columns> on 2024-07-11 16:07:44.993710+00:00
+[2024-07-11T16:08:12.744+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=220) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-07-11T16:08:12.746+0000] {standard_task_runner.py:63} INFO - Started process 229 to run task
+[2024-07-11T16:08:12.747+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'taxi_trip_processing', 'rename_columns', 'manual_run_20240711_213744', '--job-id', '553', '--raw', '--subdir', 'DAGS_FOLDER/process_csv_dag.py', '--cfg-path', '/tmp/tmpd923kkhe']
+[2024-07-11T16:08:12.752+0000] {standard_task_runner.py:91} INFO - Job 553: Subtask rename_columns
+[2024-07-11T16:08:12.835+0000] {task_command.py:426} INFO - Running <TaskInstance: taxi_trip_processing.rename_columns manual_run_20240711_213744 [running]> on host 7fbd25afd4e9
+[2024-07-11T16:08:12.990+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='your_email@gmail.com' AIRFLOW_CTX_DAG_OWNER='Yukesh' AIRFLOW_CTX_DAG_ID='taxi_trip_processing' AIRFLOW_CTX_TASK_ID='rename_columns' AIRFLOW_CTX_EXECUTION_DATE='2024-07-11T16:07:44.993710+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual_run_20240711_213744'
+[2024-07-11T16:08:12.992+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-07-11T16:08:13.064+0000] {warnings.py:110} WARNING - /opt/***/dags/process_csv_dag.py:92: FutureWarning: Passing literal json to 'read_json' is deprecated and will be removed in a future version. To read from a literal string, wrap it in a 'StringIO' object.
+  df = pd.read_json(ti.xcom_pull(task_ids='generate_new_columns', key='final_df'))
+
+[2024-07-11T16:08:13.471+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-07-11T16:08:13.473+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-07-11T16:08:13.495+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=taxi_trip_processing, task_id=rename_columns, run_id=manual_run_20240711_213744, execution_date=20240711T160744, start_date=20240711T160812, end_date=20240711T160813
+[2024-07-11T16:08:13.566+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-07-11T16:08:13.618+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-07-11T16:08:13.622+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

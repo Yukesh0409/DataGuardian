@@ -1,0 +1,41 @@
+[2024-07-11T14:46:15.016+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-11T14:46:15.069+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Addition_Pipeline.tsk_addtion_of_numbers manual__2024-07-11T14:46:07.501591+00:00 [queued]>
+[2024-07-11T14:46:15.089+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Addition_Pipeline.tsk_addtion_of_numbers manual__2024-07-11T14:46:07.501591+00:00 [queued]>
+[2024-07-11T14:46:15.090+0000] {taskinstance.py:2306} INFO - Starting attempt 2 of 3
+[2024-07-11T14:46:15.126+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): tsk_addtion_of_numbers> on 2024-07-11 14:46:07.501591+00:00
+[2024-07-11T14:46:15.137+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=735) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-07-11T14:46:15.140+0000] {standard_task_runner.py:63} INFO - Started process 736 to run task
+[2024-07-11T14:46:15.140+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'Addition_Pipeline', 'tsk_addtion_of_numbers', 'manual__2024-07-11T14:46:07.501591+00:00', '--job-id', '542', '--raw', '--subdir', 'DAGS_FOLDER/slack_notification_test.py', '--cfg-path', '/tmp/tmpkgwj43al']
+[2024-07-11T14:46:15.142+0000] {standard_task_runner.py:91} INFO - Job 542: Subtask tsk_addtion_of_numbers
+[2024-07-11T14:46:15.247+0000] {task_command.py:426} INFO - Running <TaskInstance: Addition_Pipeline.tsk_addtion_of_numbers manual__2024-07-11T14:46:07.501591+00:00 [running]> on host 7fbd25afd4e9
+[2024-07-11T14:46:15.467+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***@example.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Addition_Pipeline' AIRFLOW_CTX_TASK_ID='tsk_addtion_of_numbers' AIRFLOW_CTX_EXECUTION_DATE='2024-07-11T14:46:07.501591+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-07-11T14:46:07.501591+00:00'
+[2024-07-11T14:46:15.469+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-07-11T14:46:15.502+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-07-11T14:46:15.504+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/slack_notification_test.py", line 9, in testing_slack_notify
+    a = '3' + 4
+        ~~~~^~~
+TypeError: can only concatenate str (not "int") to str
+[2024-07-11T14:46:15.526+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=Addition_Pipeline, task_id=tsk_addtion_of_numbers, run_id=manual__2024-07-11T14:46:07.501591+00:00, execution_date=20240711T144607, start_date=20240711T144615, end_date=20240711T144615
+[2024-07-11T14:46:15.555+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 542 for task tsk_addtion_of_numbers (can only concatenate str (not "int") to str; 736)
+[2024-07-11T14:46:15.598+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-07-11T14:46:15.631+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-11T14:46:15.635+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
